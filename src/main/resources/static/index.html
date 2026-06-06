@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AasaiThambi Clay Works – Premium Vinayagar Idols</title>
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== TOP RIBBON ===== -->
+<div class="top-ribbon">
+  <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <div class="ribbon-left d-flex align-items-center gap-3">
+      <span><i class="fa-solid fa-phone-volume me-1"></i> +91 9551668554</span>
+            <span><i class="fa-solid fa-phone-volume me-1"></i> +91 9840571687</span>
+                  <span><i class="fa-solid fa-phone-volume me-1"></i> +91 9676791734</span>
+      <span><i class="fa-solid fa-envelope me-1"></i> aasaithambi@clayworks.in</span>
+    </div>
+    <div class="ribbon-right d-flex align-items-center gap-3">
+      <span></i> pure clay and hand made</span>
+      <span><i class="fa-solid fa-award me-1"></i> 25+ Years of Legacy</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+  <div class="container-fluid px-4">
+
+    <!-- Brand Logo -->
+    <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+      <div class="brand-logo-icon">
+        <i class="fa-solid fa-gopuram"></i>
+      </div>
+      <div class="brand-text-wrap">
+        <span class="brand-title">AasaiThambi</span>
+        <span class="brand-sub">Clay Works</span>
+      </div>
+    </a>
+
+    <!-- Search Bar (Desktop) -->
+    <div class="search-wrapper d-none d-lg-flex flex-grow-1 mx-4">
+      <div class="search-category-select">
+        <select id="searchCategory">
+          <option>All</option>
+          <option>3–5 Feet</option>
+          <option>6–8 Feet</option>
+          <option>9–11 Feet</option>
+          <option>12–13 Feet</option>
+          <option>Custom</option>
+        </select>
+      </div>
+      <input type="text" class="search-input" placeholder="Search Vinayagar Idols, Sizes, Designs..." id="searchInput" />
+      <button class="search-btn" onclick="handleSearch()">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+
+    <!-- Nav Right Icons -->
+    <div class="nav-icons d-flex align-items-center gap-3 ms-auto">
+      <div class="nav-icon-wrap d-none d-md-flex" id="accountBtn">
+        <i class="fa-regular fa-user"></i>
+        <span>Account</span>
+      </div>
+      <div class="nav-icon-wrap d-none d-md-flex" id="wishlistBtn">
+        <i class="fa-regular fa-heart"></i>
+        <span>Wishlist <span class="badge-count" id="wishlistCount">0</span></span>
+      </div>
+      <div class="nav-icon-wrap cart-icon-wrap" id="cartBtn">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Cart <span class="badge-count" id="cartCount">0</span></span>
+      </div>
+      <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Collapse Menu -->
+    <div class="collapse navbar-collapse mt-2 mt-lg-0" id="mainMenu">
+      <ul class="navbar-nav mx-auto gap-1 gap-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#categories">Collections</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Idols</a></li>
+        <li class="nav-item"><a class="nav-link" href="#process">Craft Process</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <!-- Mobile Search -->
+      <div class="search-wrapper d-flex d-lg-none mt-2">
+        <input type="text" class="search-input" placeholder="Search idols..." />
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO SECTION ===== -->
+<section id="home" class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="hero-particles" id="heroParticles"></div>
+  <div class="container h-100 position-relative z-1">
+    <div class="row h-100 align-items-center">
+      <div class="col-lg-6">
+        <div class="hero-badge">
+          <i class="fa-solid fa-star me-1"></i> Trusted Since 1999
+        </div>
+        <h1 class="hero-title">
+          Sacred Clay<br />
+          <span class="hero-title-accent">Masterpieces</span><br />
+          By Artisan Hands
+        </h1>
+        <p class="hero-desc">
+          Handcrafted Vinayagar Idols from <strong>3 Feet to 13 Feet</strong> —  
+          ancient clay-working tradition. Every idol is a blessing, shaped with devotion.
+        </p>
+        <div class="hero-cta d-flex flex-wrap gap-3">
+          <a href="#products" class="btn-primary-custom">
+            <i class="fa-solid fa-gopuram me-2"></i> Explore Idols
+          </a>
+          <a href="#contact" class="btn-outline-custom">
+            <i class="fa-solid fa-phone me-2"></i> Custom Order
+          </a>
+        </div>
+        <div class="hero-stats d-flex gap-4 mt-5 flex-wrap">
+          <div class="stat-item">
+            <span class="stat-num" data-target="1200">0</span><span>+</span>
+            <span class="stat-label">Idols Delivered</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="25">0</span><span>+</span>
+            <span class="stat-label">Years Legacy</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="18">0</span><span>+</span>
+            <span class="stat-label">States Served</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
+        <div class="hero-idol-showcase">
+          <div class="hero-idol-glow"></div>
+          <img src="images/Camera Roll/WhatsApp Image 2026-06-04 at 4.43.02 PM.jpeg"
+               alt="Vinayagar Idol" class="hero-idol-img" loading="lazy" onerror="this.src='https://placehold.co/420x520/d4a843/1a0a00?text=Vinayagar+Idol&font=playfair-display'" />
+          <div class="hero-idol-badge">
+            <i class="fa-solid fa-award"></i>
+            <span>Award Winning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== MARQUEE BANNER ===== -->
+<div class="marquee-banner">
+  <div class="marquee-track">
+    <span>🙏 Eco-Friendly Clay &nbsp;•&nbsp;</span>
+    <span>🎨 Hand-Painted Finishes &nbsp;•&nbsp;</span>
+    
+    <span>🏆 25+ Years Legacy &nbsp;•&nbsp;</span>
+    <span>✨ Custom Sizes Available &nbsp;•&nbsp;</span>
+    <span>🕉️ Blessed by Artisans &nbsp;•&nbsp;</span>
+    <span>💛 Ganesh Chaturthi Specials &nbsp;•&nbsp;</span>
+    <span>🌿 Natural Colors Used &nbsp;•&nbsp;</span>
+    <span>🙏 Eco-Friendly Clay &nbsp;•&nbsp;</span>
+    <span>🎨 Hand-Painted Finishes &nbsp;•&nbsp;</span>
+   
+    <span>🏆 25+ Years Legacy &nbsp;•&nbsp;</span>
+    <span>✨ Custom Sizes Available &nbsp;•&nbsp;</span>
+    <span>🕉️ Blessed by Artisans &nbsp;•&nbsp;</span>
+    <span>💛 Ganesh Chaturthi Specials &nbsp;•&nbsp;</span>
+    <span>🌿 Natural Colors Used &nbsp;•&nbsp;</span>
+  </div>
+</div>
+
+<!-- ===== FEATURE STRIPS ===== -->
+<section class="features-strip">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-6 col-md-3">
+        <div class="feature-card">
+           <i class="fa-solid fa-gopuram feature-icon"></i>
+          <h6>Pure Divine</h6>
+          <p>Each And Every Idols Are Made Up Of Pure Clay</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="feature-card">
+          <i class="fa-solid fa-hands feature-icon"></i>
+          <h6>100% Handcrafted</h6>
+          <p>Each idol shaped by master Tamil artisans</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="feature-card">
+          <i class="fa-solid fa-leaf feature-icon"></i>
+          <h6>Eco Friendly</h6>
+          <p>Pure clay, natural paints – dissolves safely</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="feature-card">
+          <i class="fa-solid fa-headset feature-icon"></i>
+          <h6>24/7 Support</h6>
+          <p>Dedicated team for custom & bulk orders</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section id="categories" class="categories-section section-gap">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Browse by Size</span>
+      <h2 class="section-title">Our Collections</h2>
+      <p class="section-desc">From intimate home shrines to grand pandal centerpieces — find your perfect Vinayagar</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="category-card" onclick="filterProducts('3-5')">
+          <div class="cat-icon-wrap"><i class="fa-solid fa-gopuram"></i></div>
+          <div class="cat-size">3 – 5 Ft</div>
+          <div class="cat-name">Home Shrine</div>
+          <div class="cat-count">12 Designs</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="category-card" onclick="filterProducts('6-8')">
+          <div class="cat-icon-wrap"><i class="fa-solid fa-gopuram"></i></div>
+          <div class="cat-size">6 – 8 Ft</div>
+          <div class="cat-name">Society Idol</div>
+          <div class="cat-count">8 Designs</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="category-card active" onclick="filterProducts('9-11')">
+          <div class="cat-icon-wrap"><i class="fa-solid fa-gopuram"></i></div>
+          <div class="cat-size">9 – 11 Ft</div>
+          <div class="cat-name">Pandal Grade</div>
+          <div class="cat-count">6 Designs</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="category-card" onclick="filterProducts('12-13')">
+          <div class="cat-icon-wrap"><i class="fa-solid fa-gopuram"></i></div>
+          <div class="cat-size">12 – 13 Ft</div>
+          <div class="cat-name">Grand Idol</div>
+          <div class="cat-count">4 Designs</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="category-card" onclick="filterProducts('eco')">
+          <div class="cat-icon-wrap"><i class="fa-solid fa-leaf"></i></div>
+          <div class="cat-size">Eco Clay</div>
+          <div class="cat-name">Dissolves Fast</div>
+          <div class="cat-count">All Sizes</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="category-card" onclick="filterProducts('custom')">
+          <div class="cat-icon-wrap"><i class="fa-solid fa-palette"></i></div>
+          <div class="cat-size">Custom</div>
+          <div class="cat-name">Your Design</div>
+          <div class="cat-count">Any Size</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS SECTION ===== -->
+<section id="products" class="products-section section-gap">
+  <div class="container">
+    <div class="section-header d-flex justify-content-between align-items-end flex-wrap gap-3 mb-5">
+      <div>
+        <span class="section-tag">Featured Idols</span>
+        <h2 class="section-title mb-0">Our Premium Vinayagar Idols</h2>
+      </div>
+      <div class="d-flex gap-2 flex-wrap">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="3-5">3–5 Ft</button>
+        <button class="filter-btn" data-filter="6-8">6–8 Ft</button>
+        <button class="filter-btn" data-filter="9-11">9–11 Ft</button>
+        <button class="filter-btn" data-filter="12-13">12–13 Ft</button>
+      </div>
+    </div>
+
+    <div class="row g-4" id="productGrid">
+      <!-- Products injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS SECTION ===== -->
+<section id="process" class="process-section section-gap">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Our Craft</span>
+      <h2 class="section-title">From Earth to Divinity</h2>
+      <p class="section-desc">A sacred seven-step journey that transforms raw clay into a blessed idol</p>
+    </div>
+    <div class="process-timeline">
+      <div class="process-line"></div>
+      <div class="row g-5">
+        <div class="col-md-6 col-lg-3">
+          <div class="process-step">
+            <div class="step-num">01</div>
+            <div class="step-icon"><i class="fa-solid fa-mountain"></i></div>
+            <h5>Clay Selection</h5>
+            <p>Premium river clay sourced from sacred banks of Tamil Nadu — tested for purity and plasticity.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="process-step">
+            <div class="step-num">02</div>
+            <div class="step-icon"><i class="fa-solid fa-hands"></i></div>
+            <h5>Hand Sculpting</h5>
+            <p>Master artisans shape each curve by hand, breathing life into Lord Ganesha's divine form.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="process-step">
+            <div class="step-num">03</div>
+            <div class="step-icon"><i class="fa-solid fa-fire"></i></div>
+            <h5>Sun Drying & Kiln</h5>
+            <p>Naturally sun-dried for strength, then kiln-fired to achieve perfect durability and texture.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="process-step">
+            <div class="step-num">04</div>
+            <div class="step-icon"><i class="fa-solid fa-paint-brush"></i></div>
+            <h5>Hand Painting</h5>
+            <p>Vibrant natural and chemical-free paints applied by skilled painters — each stroke a prayer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY SECTION ===== -->
+<section id="gallery" class="gallery-section section-gap">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Visual Stories</span>
+      <h2 class="section-title">Gallery of Devotion</h2>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item tall">
+        <img src="images/Camera Roll/WhatsApp Image 2026-06-04 at 4.43.02 PM.jpeg"
+             alt="Vinayagar Idol 1" loading="lazy"
+             onerror="this.src='https://placehold.co/400x600/8b4513/ffd700?text=Ganesh+Idol&font=playfair-display'" />
+        <div class="gallery-overlay"><span>Grand Vinayagar</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/Camera Roll/WhatsApp Image 2026-06-04 at 4.43.10 PM (2).jpeg"
+             alt="Vinayagar Idol 2" loading="lazy"
+             onerror="this.src='https://placehold.co/400x400/d4a843/1a0a00?text=Gold+Ganesha&font=playfair-display'" />
+        <div class="gallery-overlay"><span>Golden Ganesha</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ganesha_stone_sculpture.jpg/640px-Ganesha_stone_sculpture.jpg"
+             alt="Vinayagar Idol 3" loading="lazy"
+             onerror="this.src='https://placehold.co/400x400/c0392b/ffd700?text=Clay+Ganesha&font=playfair-display'" />
+        <div class="gallery-overlay"><span>Clay Heritage</span></div>
+      </div>
+      <div class="gallery-item wide">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Idol_of_Ganesha.jpg/640px-Idol_of_Ganesha.jpg"
+             alt="Vinayagar Idol 4" loading="lazy"
+             onerror="this.src='https://placehold.co/700x400/2c1810/ffd700?text=Festival+Ganesha&font=playfair-display'" />
+        <div class="gallery-overlay"><span>Festival Edition</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Lord_Ganesha_Photo.jpg/640px-Lord_Ganesha_Photo.jpg"
+             alt="Vinayagar Idol 5" loading="lazy"
+             onerror="this.src='https://placehold.co/400x400/4a2c0a/ffd700?text=Premium+Idol&font=playfair-display'" />
+        <div class="gallery-overlay"><span>Premium Idol</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials-section section-gap">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Devotee Reviews</span>
+      <h2 class="section-title">What Our Customers Say</h2>
+    </div>
+    <div class="row g-4" id="testimonialsGrid">
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"We ordered a 9-foot Vinayagar for our colony's Ganesh Chaturthi. The idol was breathtaking — every detail perfectly carved. Delivered safely, on time. Highly recommend AasaiThambi!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">RS</div>
+            <div>
+              <strong>Rajesh Subramaniam</strong>
+              <span>Chennai, Tamil Nadu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card featured">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Got a custom 5-foot eco-clay idol for my home puja. The natural colours are stunning and the clay dissolved completely during visarjan. Pure art, pure devotion. Will order every year!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">PD</div>
+            <div>
+              <strong>Priya Dhanasekaran</strong>
+              <span>Coimbatore, Tamil Nadu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p>"Ordered a 13-foot grand idol for our temple festival. The craftsmanship is unbelievable. AasaiThambi's team was so helpful throughout — from design approval to safe installation."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">MK</div>
+            <div>
+              <strong>Murugesan Kannan</strong>
+              <span>Madurai, Tamil Nadu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section id="about" class="about-section section-gap">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="about-image-wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Ganesh_Idol.jpg/640px-Ganesh_Idol.jpg"
+               alt="About AasaiThambi" class="about-main-img" loading="lazy"
+               onerror="this.src='https://placehold.co/560x620/2c1810/ffd700?text=Our+Workshop&font=playfair-display'" />
+          <div class="about-exp-badge">
+            <span class="exp-num">25</span>
+            <span class="exp-text">Years of<br/>Artisan Legacy</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <span class="section-tag">Our Story</span>
+        <h2 class="section-title">Passion Shaped in Clay,<br/>Blessed by Tradition</h2>
+        <p class="about-desc">
+          AasaiThambi Clay Works was founded in 1999 in Bommala Quarters, Tirupathi by a family of passionate clay artisans.
+          What began as a small workshop crafting temple idols has grown into one of Tirupathi's most
+          respected Vinayagar idol manufacturers, delivering divine masterpieces across 18+ Indian states.
+        </p>
+        <p class="about-desc">
+          Every idol we create carries the soul of our ancestors' craft — from the sacred clay we source to the final
+          brushstroke of gold. We are proud to be part of India's living cultural heritage.
+        </p>
+        <div class="about-highlights row g-3 mt-3">
+          <div class="col-6">
+            <div class="highlight-item">
+              <i class="fa-solid fa-check-circle"></i> Eco-Friendly Materials
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="highlight-item">
+              <i class="fa-solid fa-check-circle"></i> ISO Certified Workshop
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="highlight-item">
+              <i class="fa-solid fa-check-circle"></i> Pan-India Shipping
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="highlight-item">
+              <i class="fa-solid fa-check-circle"></i> Custom Orders Welcome
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="highlight-item">
+              <i class="fa-solid fa-check-circle"></i> 3 to 13 Feet Range
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="highlight-item">
+              <i class="fa-solid fa-check-circle"></i> 1200+ Idols Delivered
+            </div>
+          </div>
+        </div>
+        <a href="#contact" class="btn-primary-custom mt-4 d-inline-block">
+          <i class="fa-solid fa-phone me-2"></i> Talk to an Artisan
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BANNER CTA ===== -->
+<section class="cta-banner-section">
+  <div class="cta-banner-overlay"></div>
+  <div class="container position-relative z-1 text-center">
+    <i class="fa-solid fa-om cta-om-icon"></i>
+    <h2>Planning Ganesh Chaturthi This Year?</h2>
+    <p>Book your custom Vinayagar idol now — slots fill fast during the festival season.</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+      <a href="#contact" class="btn-primary-custom">
+        <i class="fa-solid fa-calendar-check me-2"></i> Book Custom Order
+      </a>
+      <a href="tel:+919551668554" class="btn-outline-custom">
+        <i class="fa-solid fa-phone me-2"></i> Call Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section id="contact" class="contact-section section-gap">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Get in Touch</span>
+      <h2 class="section-title">Contact & Custom Orders</h2>
+    </div>
+    <div class="row g-5">
+      <div class="col-lg-5">
+        <div class="contact-info-card">
+          <h4>AasaiThambi Clay Works</h4>
+          <p class="text-muted">Reach us through any channel — we'd love to help you bring your vision to life.</p>
+          <div class="contact-detail">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Workshop Address</strong>
+              <span>Bommala Quarters, Tirupathi, Andhra Pradesh – 533 221, India</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="fa-solid fa-phone-volume"></i>
+            <div>
+              <strong>Phone / WhatsApp</strong>
+              <span>+91 9676791734</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <span>aasaithambi@clayworks.in</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <strong>Working Hours</strong>
+              <span>24/7</span>
+            </div>
+          </div>
+          <div class="social-icons mt-4 d-flex gap-3">
+            <a href="#" class="social-icon" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="contact-form-card">
+          <h4>Send Us a Message</h4>
+          <div class="row g-3" id="contactForm">
+            <div class="col-md-6">
+              <label class="form-label">Your Name *</label>
+              <input type="text" class="form-control custom-input" id="contactName" placeholder="Enter your name" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Phone Number *</label>
+              <input type="tel" class="form-control custom-input" id="contactPhone" placeholder="+91 XXXXX XXXXX" />
+            </div>
+            <div class="col-12">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control custom-input" id="contactEmail" placeholder="you@example.com" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Idol Size Required</label>
+              <select class="form-control custom-input" id="contactSize">
+                <option value="">Select Size</option>
+                <option>3 Feet</option>
+                <option>4 Feet</option>
+                <option>5 Feet</option>
+                <option>6 Feet</option>
+                <option>7 Feet</option>
+                <option>8 Feet</option>
+                <option>9 Feet</option>
+                <option>10 Feet</option>
+                <option>11 Feet</option>
+                <option>12 Feet</option>
+                <option>13 Feet</option>
+                <option>Custom Size</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Quantity</label>
+              <input type="number" class="form-control custom-input" id="contactQty" placeholder="e.g. 1" min="1" />
+            </div>
+            <div class="col-12">
+              <label class="form-label">Message / Special Requirements</label>
+              <textarea class="form-control custom-input" id="contactMsg" rows="4" placeholder="Describe your requirements, event date, delivery location..."></textarea>
+            </div>
+            <div class="col-12">
+              <button class="btn-primary-custom w-100" onclick="submitContact()">
+                <i class="fa-solid fa-paper-plane me-2"></i> Send Enquiry
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-brand d-flex align-items-center gap-3 mb-3">
+            <div class="brand-logo-icon"><i class="fa-solid fa-gopuram"></i></div>
+            <div class="brand-text-wrap">
+              <span class="brand-title">AasaiThambi</span>
+              <span class="brand-sub">Clay Works</span>
+            </div>
+          </div>
+          <p class="footer-about">
+            Crafting divine Vinayagar idols since 1999 from the sacred soils of Tirupathi.
+            From 3 feet to 13 feet — every idol is a masterpiece of faith and artistry.
+          </p>
+          <div class="social-icons d-flex gap-3 mt-3">
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-heading">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Collections</a></li>
+            <li><a href="#products">Idols</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-heading">Idol Sizes</h6>
+          <ul class="footer-links">
+            <li><a href="#">3 – 5 Feet</a></li>
+            <li><a href="#">6 – 8 Feet</a></li>
+            <li><a href="#">9 – 11 Feet</a></li>
+            <li><a href="#">12 – 13 Feet</a></li>
+            <li><a href="#">Eco-Clay Idols</a></li>
+            <li><a href="#">Custom Orders</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6 class="footer-heading">Newsletter & Updates</h6>
+          <p class="footer-sub">Get festival offers, new designs & early booking alerts.</p>
+          <div class="footer-subscribe d-flex">
+            <input type="email" placeholder="Enter your email" class="footer-email-input" id="newsletterEmail" />
+            <button onclick="subscribeNewsletter()"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+          <div class="footer-badges d-flex gap-2 mt-4 flex-wrap">
+            <span class="footer-badge"><i class="fa-solid fa-shield-halved me-1"></i> Secure Payments</span>
+            <span class="footer-badge"><i class="fa-solid fa-leaf me-1"></i> Eco Certified</span>
+            <span class="footer-badge"><i class="fa-solid fa-truck me-1"></i> Pan India</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <span>© 2025 AasaiThambi Clay Works. All Rights Reserved. | Bommala Quarters, Tirupathi, Andhra Pradesh</span>
+      <span>Crafted with <i class="fa-solid fa-heart text-danger"></i> for Devotion and Artistry</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== CART SIDEBAR ===== -->
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h5><i class="fa-solid fa-cart-shopping me-2"></i>Your Cart</h5>
+    <button onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <i class="fa-solid fa-gopuram"></i>
+      <p>Your cart is empty.<br/>Add a divine idol!</p>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-total">
+      <span>Total:</span>
+      <span id="cartTotal">₹0</span>
+    </div>
+    <button class="btn-primary-custom w-100" onclick="checkout()">
+      <i class="fa-solid fa-credit-card me-2"></i>Proceed to Checkout
+    </button>
+  </div>
+</div>
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+<!-- ===== TOAST ===== -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="mainToast" class="toast align-items-center border-0" role="alert">
+    <div class="d-flex">
+      <div class="toast-body" id="toastMsg">Action completed!</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WHATSAPP FLOAT ===== -->
+<a href="https://wa.me/919551668554?text=Hello%20AasaiThambi!%20I%20want%20to%20enquire%20about%20Vinayagar%20idols."
+   class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
