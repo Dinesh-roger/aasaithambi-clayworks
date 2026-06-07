@@ -20,12 +20,12 @@ const PRODUCTS = [
         badge: "bestseller",
         badgeLabel: "Best Seller",
         eco: false,
-        img: "C:\\Users\\Dinesh D\\Downloads\\clayworks\\clayworks\\src\\main\\resources\\static\\images\\3 feet2.webp",
+        img: "images/3 feet.webp",
         imgFallback: "https://placehold.co/400x350/d4a843/1a0a00?text=3+Ft+Vinayagar&font=playfair-display"
     },
     {
         id: 2,
-        name: "Golden Ganapathi Premium",
+        name: " Ganapathi Premium",
         category: "3-5",
         categoryLabel: "3–5 Ft",
         size: "5 Feet",
@@ -36,7 +36,7 @@ const PRODUCTS = [
         badge: "new",
         badgeLabel: "New Arrival",
         eco: false,
-        img: "C:\\Users\\Dinesh D\\Downloads\\clayworks\\clayworks\\src\\main\\resources\\static\\images\\5 feet.webp",
+        img: "images/3 feet2.webp",
         imgFallback: "https://placehold.co/400x350/8b4513/ffd700?text=5+Ft+Vinayagar&font=playfair-display"
     },
     {
