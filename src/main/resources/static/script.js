@@ -20,7 +20,7 @@ const PRODUCTS = [
         badge: "bestseller",
         badgeLabel: "Best Seller",
         eco: false,
-        img: "images/Camera Roll/WhatsApp Image 2026-06-04 at 4.43.02 PM.jpeg",
+        img: "C:\\Users\\Dinesh D\\Downloads\\clayworks\\clayworks\\src\\main\\resources\\static\\images\\3 feet2.webp",
         imgFallback: "https://placehold.co/400x350/d4a843/1a0a00?text=3+Ft+Vinayagar&font=playfair-display"
     },
     {
@@ -36,7 +36,7 @@ const PRODUCTS = [
         badge: "new",
         badgeLabel: "New Arrival",
         eco: false,
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Ganesha_Artwork.jpg/640px-Ganesha_Artwork.jpg",
+        img: "C:\\Users\\Dinesh D\\Downloads\\clayworks\\clayworks\\src\\main\\resources\\static\\images\\5 feet.webp",
         imgFallback: "https://placehold.co/400x350/8b4513/ffd700?text=5+Ft+Vinayagar&font=playfair-display"
     },
     {
@@ -52,7 +52,7 @@ const PRODUCTS = [
         badge: "eco",
         badgeLabel: "Eco Friendly",
         eco: true,
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ganesha_stone_sculpture.jpg/640px-Ganesha_stone_sculpture.jpg",
+        img: "ima",
         imgFallback: "https://placehold.co/400x350/2d7a22/ffd700?text=Eco+Vinayagar&font=playfair-display"
     },
     {
