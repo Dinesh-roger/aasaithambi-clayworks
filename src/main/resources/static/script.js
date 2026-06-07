@@ -52,7 +52,7 @@ const PRODUCTS = [
         badge: "eco",
         badgeLabel: "Eco Friendly",
         eco: true,
-        img: "ima",
+        img: "images/WhatsApp Image 2026-06-07 at 10.16.38 AM (1).jpeg",
         imgFallback: "https://placehold.co/400x350/2d7a22/ffd700?text=Eco+Vinayagar&font=playfair-display"
     },
     {
@@ -68,7 +68,7 @@ const PRODUCTS = [
         badge: "bestseller",
         badgeLabel: "Best Seller",
         eco: false,
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Idol_of_Ganesha.jpg/640px-Idol_of_Ganesha.jpg",
+        img: "images/WhatsApp Image 2026-06-07 at 10.16.38 AM (2).jpeg",
         imgFallback: "https://placehold.co/400x350/b5451b/ffd700?text=8+Ft+Vinayagar&font=playfair-display"
     },
     {
@@ -84,7 +84,7 @@ const PRODUCTS = [
         badge: "new",
         badgeLabel: "New Design",
         eco: false,
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Lord_Ganesha_Photo.jpg/640px-Lord_Ganesha_Photo.jpg",
+        img: "images/WhatsApp Image 2026-06-07 at 10.16.39 AM (1).jpeg",
         imgFallback: "https://placehold.co/400x350/4a2c0a/ffd700?text=9+Ft+Vinayagar&font=playfair-display"
     },
     {
@@ -100,39 +100,39 @@ const PRODUCTS = [
         badge: "bestseller",
         badgeLabel: "Premium",
         eco: false,
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Ganesh_Idol.jpg/640px-Ganesh_Idol.jpg",
+        img: "images/WhatsApp Image 2026-06-07 at 10.16.39 AM (2).jpeg",
         imgFallback: "https://placehold.co/400x350/1a0a00/ffd700?text=11+Ft+Vinayagar&font=playfair-display"
     },
     {
         id: 7,
         name: "Grand Mahotsav Vinayagar",
-        category: "12-13",
-        categoryLabel: "12–13 Ft",
-        size: "12 Feet",
-        price: 55000,
-        oldPrice: 68000,
+        category: "11-12",
+        categoryLabel: "11–12 Ft",
+        size: "11 Feet",
+        price: 25000,
+        oldPrice: 38000,
         rating: 5,
         reviews: 11,
         badge: "new",
         badgeLabel: "Limited Edition",
         eco: false,
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Ganesha_Artwork.jpg/640px-Ganesha_Artwork.jpg",
+        img: "images/WhatsApp Image 2026-06-07 at 10.16.39 AM (3).jpeg",
         imgFallback: "https://placehold.co/400x350/c0392b/ffd700?text=12+Ft+Vinayagar&font=playfair-display"
     },
     {
         id: 8,
         name: "Triumph Ganapathi Supreme",
-        category: "12-13",
-        categoryLabel: "12–13 Ft",
-        size: "13 Feet",
-        price: 75000,
-        oldPrice: 90000,
+        category: "11-12",
+        categoryLabel: "11–12 Ft",
+        size: "11 Feet",
+        price: 25000,
+        oldPrice: 40000,
         rating: 5,
         reviews: 7,
         badge: "bestseller",
         badgeLabel: "Grand Master",
         eco: false,
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ganesha_stone_sculpture.jpg/640px-Ganesha_stone_sculpture.jpg",
+        img: "images/WhatsApp Image 2026-06-07 at 10.16.39 AM.jpeg",
         imgFallback: "https://placehold.co/400x350/2c1810/ffd700?text=13+Ft+Vinayagar&font=playfair-display"
     }
 ];
