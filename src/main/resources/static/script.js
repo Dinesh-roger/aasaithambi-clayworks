@@ -741,42 +741,39 @@ function submitContact() {
     if (!name) { showToast('Please enter your name.'); return; }
     if (!phone) { showToast('Please enter your phone number.'); return; }
 
-    // Simulate submission
     const btn = document.querySelector('#contactForm .btn-primary-custom');
     const origText = btn.innerHTML;
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Sending...';
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Opening WhatsApp...';
     btn.disabled = true;
 
-    fetch('http://localhost:8080/api/enquiries', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            name: name,
-            phone: phone,
-            email: email,
-            idolSize: size,
-            quantity: parseInt(qty) || 1,
-            message: msg
-        })
-    })
-        .then(res => res.json())
-        .then(data => {
-            btn.innerHTML = '<i class="fa-solid fa-check me-2"></i> Sent Successfully!';
-            btn.style.background = 'linear-gradient(135deg, #2d7a22, #1a5c12)';
-            showToast(`🙏 Thank you, ${name}! We'll call you within 24 hours.`);
-            ['contactName', 'contactPhone', 'contactEmail', 'contactSize', 'contactQty', 'contactMsg']
-                .forEach(id => { document.getElementById(id).value = ''; });
-            setTimeout(() => {
-                btn.innerHTML = origText;
-                btn.disabled = false;
-                btn.style.background = '';
-            }, 4000);
-        })
-        .catch(() => {
-            showToast('Something went wrong. Please try again.');
-            btn.innerHTML = origText;
-            btn.disabled = false;
-        });
+    // Build WhatsApp message
+    let waMsg = `🙏 *New Enquiry – AasaiThambi Clay Works*\n\n`;
+    waMsg += `👤 *Name:* ${name}\n`;
+    waMsg += `📞 *Phone:* ${phone}\n`;
+    if (email) waMsg += `📧 *Email:* ${email}\n`;
+    if (size) waMsg += `📐 *Idol Size:* ${size}\n`;
+    if (qty) waMsg += `🔢 *Quantity:* ${qty}\n`;
+    if (msg) waMsg += `💬 *Message:* ${msg}\n`;
+    waMsg += `\n_Sent from AasaiThambi website_`;
+
+    const waNumber = '919676791734';
+    const waURL = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMsg)}`;
+
+    // Open WhatsApp
+    window.open(waURL, '_blank');
+
+    btn.innerHTML = '<i class="fa-solid fa-check me-2"></i> Sent via WhatsApp!';
+    btn.style.background = 'linear-gradient(135deg, #25d366, #128c7e)';
+    showToast(`🙏 Thank you, ${name}! WhatsApp opened — please press Send to complete your enquiry.`);
+
+    ['contactName', 'contactPhone', 'contactEmail', 'contactSize', 'contactQty', 'contactMsg']
+        .forEach(id => { document.getElementById(id).value = ''; });
+
+    setTimeout(() => {
+        btn.innerHTML = origText;
+        btn.disabled = false;
+        btn.style.background = '';
+    }, 5000);
 }
 
 
@@ -791,19 +788,16 @@ function subscribeNewsletter() {
         return;
     }
 
-    fetch('http://localhost:8080/api/newsletter/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email })
-    })
-        .then(res => res.json())
-        .then(data => {
-            showToast(`🎉 ${data.message} Welcome, ${email.split('@')[0]}!`);
-            input.value = '';
-        })
-        .catch(() => {
-            showToast('Something went wrong. Please try again.');
-        });
+    // Build WhatsApp message for subscription
+    const waMsg = `🔔 *New Newsletter Subscription – AasaiThambi Clay Works*\n\n📧 *Email:* ${email}\n\n_Please add to your updates & offers list._\n_Sent from AasaiThambi website_`;
+
+    const waNumber = '919676791734';
+    const waURL = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMsg)}`;
+
+    window.open(waURL, '_blank');
+
+    showToast(`🎉 WhatsApp opened! Press Send to complete your subscription, ${email.split('@')[0]}!`);
+    input.value = '';
 }
 
 /* ===== ACCOUNT BUTTON ===== */
